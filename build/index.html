@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title></title>
+
+	<link href="css/main.min.css" rel="stylesheet" />
+
+	<!--Favicons-->
+
+	<!-- Типограф Половнёва -->
+	<script src="https://cdn.jsdelivr.net/npm/typograf@6.7.4/dist/typograf.min.js"></script>
+
+</head>
+
+<body>
+
+	<header class="">
+		<h1>header тест</h1>
+	</header>
+
+	<main role="main">
+		main майн Майн
+
+		<h2>Жирный Х2</h2>
+		<h2 class="light">Светлый Х2</h2>
+
+		<strong>Жирный майн</strong>
+		<b>Жирный майн</b>
+
+
+		<div class="wrapper">
+			<div class="box">
+				<div id="player" class="video"></div>
+				<div class="overlay"></div>
+			</div>
+		</div>
+
+		<div class="spacer s2"></div>
+		<div id="trigger1" class="spacer s0"></div>
+		<div id="pin1" class="box2 blue">
+			<p>Stay where you are (at least for a while).</p>
+		</div>
+		<div class="spacer s2"></div>
+		
+		<script>
+			// Эта часть отвечает за встраивание видео, скопирована из документации Youtube API: https://developers.google.com/youtube/iframe_api_reference#Playback_status
+			const tag = document.createElement('script');
+
+			tag.src = "https://www.youtube.com/iframe_api";
+			const firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+			let player;
+			function onYouTubeIframeAPIReady() {
+				player = new YT.Player('player', {
+					height: '100%',
+					width: '100%',
+					videoId: '8etuWGUJv-k',
+					events: {
+						'onReady': onPlayerReady,
+						'onStateChange': onPlayerStateChange
+					}
+				});
+			}
+
+			function onPlayerReady(event) {
+				// event.target.playVideo();
+			}
+
+			var done = false;
+			function onPlayerStateChange(event) {
+				if (event.data == YT.PlayerState.PLAYING && !done) {
+					setTimeout(stopVideo, 6000);
+					done = true;
+				}
+			}
+			function stopVideo() {
+				player.stopVideo();
+				}
+			// Конец скопированной части
+
+			let $box = document.querySelector('.box');
+			let $video = $box.querySelector('.video');
+			let $overlay = $box.querySelector('.overlay');
+
+			$overlay.addEventListener('click', () => {
+				$overlay.classList.add('is__hidden');
+				console.log(player);
+				player.playVideo();
+			})
+		</script>
+
+</main>
+
+<footer class="">
+	footer
+</footer>
+
+</body>
+
+<script src="js/main.js" type="text/javascript"></script>
+
+</html>

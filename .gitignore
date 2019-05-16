@@ -1,0 +1,7 @@
+node_modules
+app
+pilates.sublime-workspace
+pilates.sublime-project
+gulpfile.js
+package-lock.json
+package.json
