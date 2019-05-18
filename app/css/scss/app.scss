@@ -1,0 +1,163 @@
+@font-face {
+	font-family: 'RFDewiExpanded';
+	src: url('../fonts/RFDewiExpanded-Semibold.WOFF') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'RFDewiExpanded';
+	src: url('../fonts/RFDewiExpanded-Black.WOFF') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'RFDewi';
+	src: url('../fonts/RFDewi-Black.WOFF') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'RFDewi';
+	src: url('../fonts/RFDewi-Semibold.WOFF') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'RFDewiExtended';
+	src: url('../fonts/RFDewiExtended-Semibold.WOFF') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+body{
+	font-family: 'RFDewi';
+	font-size: 18px;
+}
+
+p{
+	line-height: 1.2;
+	margin-bottom: 10px;
+}
+
+header{
+	background-color: $light-pink;
+}
+
+h1{
+	font-family: 'RFDewiExpanded';
+	font-weight: bold;
+	font-size: 124px;
+	line-height: 80px;
+	margin-left: -8px;
+	letter-spacing: 1;
+	margin-bottom: 30px;
+}
+
+h2{
+	font-family: 'RFDewiExpanded';
+	font-weight: bold;
+	&.light{
+		font-weight: normal;
+	}
+}
+
+.lead{
+	font-size: 28px;
+	line-height: 1.08;
+	font-family: 'RFDewiExtended';
+}
+
+.top-head{
+	margin-bottom: 50px;
+}
+
+.compensate{
+	margin-left: .5rem;
+}
+
+main{
+	min-height: 2000px;
+	background-color: $light-pink;
+}
+
+.container{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	max-width: 1200px;
+	position: relative;
+	@include media-breakpoint-up(lg) {
+		padding-right: 270px;
+	}
+}
+
+.innertube{
+	padding: 20px;
+}
+
+section{
+	background-color: white;
+}
+
+.modal-lg, .modal-xl {
+	max-width: none;
+	margin: 0;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	transform: translate(0, 50px) !important;
+}
+
+// Video hidden
+.wrapper {
+	width: 100%;
+}
+
+.box {
+	position: relative;
+	padding-bottom: 56.25%;
+}
+
+.video,
+.overlay {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.overlay {
+	background: red;
+	cursor: pointer;
+	&.is__hidden {
+		display: none;
+	}
+}
+// Video hidden
+
+.play{
+	border: 70px solid transparent;	
+	border-left: 140px solid white;
+	position: absolute;
+    bottom: 40px;
+    left: 20px;
+	&::after{
+		content: 'О курсе';
+		position: absolute;
+		font-family: 'RFDewiExpanded';
+		top: -15px;
+		left: -130px;
+		font-size: 18px;
+	}
+}
+
+.side-price{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 270px;
+	height: 100%;
+	background-color: $light-pink;
+}
