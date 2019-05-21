@@ -164,6 +164,11 @@ img{
 	&.is__hidden {
 		display: none;
 	}
+	&:hover .play{
+		transform: scale(1.05);
+		transform: translateX(5px);
+		transition: .3s;
+	}
 }
 // Video hidden
 
