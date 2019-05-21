@@ -47,10 +47,10 @@ $(document).ready(function () {
 			var scene = new ScrollMagic.Scene({
 				triggerElement: "#trigger1", 
 				triggerHook: 'onLeave',
-				duration: 1000
+				duration: 5700
 			})
 			.setPin("#pin1")
-			.addIndicators({name: "1 (duration: 1000)"}) 
+			// .addIndicators({name: "1 (duration: 7000)"}) 
 						// add indicators (requires plugin)
 						.addTo(controller);
 					});

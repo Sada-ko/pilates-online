@@ -1,0 +1,29 @@
+
+// Buttons hovering etc
+@mixin btn-colors($base-button) {
+	&:hover {
+		background-color: darken($base-button, 15%);
+	}
+	&:not(:disabled):not(.disabled).active,
+	&:not(:disabled):not(.disabled):active,
+	.show > &.dropdown-toggle {
+		color: #fff;
+		background-color: darken($base-button, 15%);
+		border-color: darken($base-button, 15%);
+	}
+	&.focus,
+	&:focus {
+		box-shadow: 0 0 0 .2rem transparentize($base-button, .7);
+	}
+	&.btn-primary:not(:disabled):not(.disabled):active:focus,
+	&.btn-primary:not(:disabled):not(.disabled).active:focus,
+	.show > &.btn-primary.dropdown-toggle:focus {
+		box-shadow: 0 0 0 .2rem transparentize($base-button, .8);
+	}
+}
+
+// HEADERS important
+h2:first-child, h3:first-child, h4:first-child, h5:first-child,
+h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
+	margin-top: 0;
+}
