@@ -1,7 +1,7 @@
 // Colors
 $light-pink: #FAE4EB;
-$crimson: #E84A50;
-$secondary: #9B68A8;
-$secondary-accent: #F3BD85;
+$crimson: rgb(232, 74, 80);
+$secondary: $crimson;
+$secondary-accent: rgb(0, 64, 153);
 
 $modal-fade-transform: scale(.8);

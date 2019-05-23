@@ -38,19 +38,19 @@ $(document).ready(function () {
 
 // ScrollMagic
 	// init controller
-	var controller = new ScrollMagic.Controller();
+	// var controller = new ScrollMagic.Controller();
 
 
-	$(function () { 
-			// wait for document ready
-			// build scene
-			var scene = new ScrollMagic.Scene({
-				triggerElement: "#trigger1", 
-				triggerHook: 'onLeave',
-				duration: 5700
-			})
-			.setPin("#pin1")
-			// .addIndicators({name: "1 (duration: 7000)"}) 
-						// add indicators (requires plugin)
-						.addTo(controller);
-					});
+	// $(function () { 
+	// 		// wait for document ready
+	// 		// build scene
+	// 		var scene = new ScrollMagic.Scene({
+	// 			triggerElement: "#trigger1", 
+	// 			triggerHook: 'onLeave',
+	// 			duration: 5700
+	// 		})
+	// 		.setPin("#pin1")
+	// 		// .addIndicators({name: "1 (duration: 7000)"}) 
+	// 					// add indicators (requires plugin)
+	// 					.addTo(controller);
+	// 				});

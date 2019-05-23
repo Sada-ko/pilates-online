@@ -33,10 +33,16 @@
 body{
 	font-family: 'RFDewi';
 	font-size: 18px;
+	background-color: $light-pink;
+	color: black;
+
+	@include media-breakpoint-down(md) {
+		font-size: 14px;
+		background-color: white;
+	}
 }
 
 header{
-	background-color: $light-pink;
 }
 
 h1, .h1{
@@ -47,6 +53,13 @@ h1, .h1{
 	margin-left: -8px;
 	letter-spacing: -5px;
 	margin-bottom: 30px;
+
+	@include media-breakpoint-down(md) {
+		font-size: 54px;
+		letter-spacing: -3px;
+		line-height: 40px;
+		margin-bottom: 15px;
+	}
 }
 
 h2, .h2{
@@ -59,6 +72,11 @@ h2, .h2{
 	transform: translateY(-5px);
 	&.light{
 		font-weight: normal;
+	}
+
+	@include media-breakpoint-down(md) {
+		font-size: 24px;
+		line-height: .9;
 	}
 }
 
@@ -73,9 +91,39 @@ h3{
 p{
 	line-height: 1.2;
 	margin-bottom: 10px;
-	max-width: 1000px;
+	max-width: 860px;
 	&:last-child{
 		margin-bottom: 0;
+	}
+}
+
+section{
+	padding-bottom: 20px;
+	&.faq{
+		padding-bottom: 40px;
+	}
+	p{
+		&:last-child{
+			margin-bottom: -4px;
+		}
+	}
+}
+
+.invert{
+	color: white;
+}
+
+a{
+	@include link-style(black, $crimson);
+	.invert &{
+		@include link-style(white, $secondary-accent);
+	}
+
+	&.icon{
+		border: none;
+		display: inline-block;
+		width: 34px;
+		height: 34px;
 	}
 }
 
@@ -83,6 +131,10 @@ p{
 	font-size: 28px;
 	line-height: 1.08;
 	font-family: 'RFDewiExtended';
+	@include media-breakpoint-down(md) {
+		font-size: 20px;
+		line-height: 1.05;
+	}
 }
 
 .pic{
@@ -93,15 +145,21 @@ p{
 .main-about{	
 	.top-head{
 		margin-bottom: 50px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 20px;
+		}
 	}
 }
 
 .compensate{
 	margin-left: .5rem;
+	@include media-breakpoint-down(md) {
+		margin-left: .25rem;
+	}
 }
 
 main{
-	background-color: $light-pink;
+	// background-color: $light-pink;
 }
 
 .container{
@@ -110,19 +168,30 @@ main{
 	width: 100%;
 	max-width: 1280px;
 	position: relative;
-	@include media-breakpoint-up(lg) {
-		padding-right: 270px;
+
+	body > &{
+		display: flex;
 	}
+	@include media-breakpoint-up(lg) {
+		// padding-right: 270px;
+	}
+}
+
+main{
+
 }
 
 .innertube{
 	padding: 20px;
+	@include media-breakpoint-down(md) {
+		padding: 10px;
+	}
 }
 
 section{
-	.container{
+	// .container{
 		background-color: white;
-	}
+	// }
 }
 
 img{
@@ -136,7 +205,17 @@ img{
 	position: absolute;
 	width: 100%;
 	bottom: 0;
-	// transform: translate(0, 50px) !important;
+}
+
+.modal.pricing{
+	.modal-content{
+		background-color: $secondary;
+		border-radius: 0;
+		border: none;
+	}
+	.container{
+		padding-right: 270px;
+	}
 }
 
 // Video hidden
@@ -165,9 +244,12 @@ img{
 		display: none;
 	}
 	&:hover .play{
-		transform: scale(1.05);
-		transform: translateX(5px);
-		transition: .3s;
+		border-left-color: $secondary;
+		// transition: .3s;
+		transition: none;
+		&::after{
+			color: white;
+		}
 	}
 }
 // Video hidden
@@ -178,6 +260,9 @@ img{
 	position: absolute;
 	bottom: 40px;
 	left: 20px;
+	transition-duration: .33s;
+	transition-timing-function: ease-out;
+
 	&::after{
 		content: 'О курсе';
 		position: absolute;
@@ -196,36 +281,74 @@ img{
 		font-size: 90px;
 		letter-spacing: -5px;
 		line-height: 100%;
+		@include media-breakpoint-down(md) {
+			font-size: 68px;
+			letter-spacing: -3px;
+			line-height: 75%;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+
+// PRICING
+button.cta,
+.signup-form .button{
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	background-color: $crimson;
+	font-family: 'RFDewiExtended';
+	font-weight: bold;
+	font-size: 26px;
+	border: none;
+	width: 250px;
+	height: 60px;
+	padding-bottom: 5px;
+}
+
+.pricing{
+	top: 0;
+	right: 0;
+	background-color: $light-pink;
+	z-index: 1;
+	padding: 10px;
+	// display: none;
+
+	&.inline{
+		@include media-breakpoint-up(lg) {
+			display: none;
+		}
+		@include media-breakpoint-down(md) {
+			display: block;
+		}
+		margin-bottom: 20px;
+	}
+
+	&.side{
+		@include media-breakpoint-down(md) {
+			display: none;
+		}
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			width: 270px;
+			max-width: 270px !important;
+			position: -webkit-sticky;
+			position: sticky;
+			height: 110vh;
+		}
+	}
+
+	.sum{
+		margin-right: 5px;
 	}
 	.curr{
 		font-family: 'RFDewi';
 		font-size: 34px;
-	}
-}
-
-.side-price{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 270px;
-	background-color: $light-pink;
-	z-index: 1;
-	padding: 10px;
-	display: none;
-
-	@include media-breakpoint-up(lg) {
-	height: 140vh;
-		display: block;
-	}
-
-	@include media-breakpoint-up(xl) {
-	height: 160vh;
-		display: block;
-	}
-
-	.price{
-		.sum{
-			margin-right: 5px;
+		margin-top: 2px;
+		@include media-breakpoint-down(md) {
+			font-size: 24px;
+			line-height: 100%;
 		}
 	}
 	.head{
@@ -233,28 +356,72 @@ img{
 		font-weight: bold;
 		font-size: 30px;
 		line-height: 105%;
-		margin-bottom: 32px;
+		margin-bottom: 30px;
+		@include media-breakpoint-down(md) {
+			font-size: 20px;
+			line-height: 1.05;
+			margin-bottom: 15px;
+		}
 	}
 	.feature{
 		border-top: 1px solid rgba(0, 0, 0, .2);
 		margin-bottom: 32px;
 		padding-top: 5px;
 	}
-	button{
+	button.cta{
 		@include btn-colors($crimson);
-		border-radius: 0;
 		background-color: $crimson;
-		font-family: 'RFDewiExtended';
-		font-weight: bold;
-		font-size: 26px;
-		border: none;
-		height: 60px;
-		padding-bottom: 10px;
+		margin-bottom: 10px;
+		transition-duration: .33s;
+		transition-timing-function: ease-out;
 		&:hover{
 			background-color: darken($crimson, 10%);
+			transition: none;
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: 5px;
+			width: 100%;
 		}
 	}
 }
+// PRICING
+
+// FORMS
+.signup-form{
+	font-family: 'RFDewiExtended';
+	font-weight: bold;
+	font-size: 26px;
+	padding-top: 5px;
+	.wrapper{
+		display: flex;
+		width: 100%;
+	}
+	label{
+		display: none;
+	}
+	input{
+		border: none;
+		padding-bottom: 5px;
+	}
+	.email{
+		width: 100%;
+		height: 60px;
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	.button{
+		@include btn-colors($secondary-accent);
+		color: white;
+		background-color: $secondary-accent;
+		transition-duration: .33s;
+		transition-timing-function: ease-out;
+		&:hover{
+			background-color: darken($secondary-accent, 10%);
+			transition: none;
+		}
+	}
+}
+// FORMS
 
 .author{
 	.row{
@@ -263,6 +430,24 @@ img{
 	.col-6{
 		padding: 0 10px;
 	}
+	.text{
+		@include media-breakpoint-down(md) {
+			order: 2;
+		}
+	}
+	.photo{
+		@include media-breakpoint-down(md) {
+			min-height: 400px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.program{
+	.lead{
+		margin-bottom: -4px;
+	}
+	padding-bottom: 10px;
 }
 
 .week{
@@ -320,19 +505,54 @@ img{
 }
 
 footer{
-	.container{
-		background-color: $secondary;
-		color: white;
-	}
+	background-color: $secondary;
 	position: relative;
 	z-index: 2;
+
+	.container{
+		// max-width: 1280px;
+		padding-right: 270px;
+	}
+	h3{
+		margin-top: 0;
+	}
+
+	.bottom{
+		@include make-row();
+		margin: 0 -10px;
+		margin-top: 110px;
+		.left{
+			@include make-col(8);
+			padding: 0 10px;
+		}
+		.right{
+			@include make-col(4);
+			padding: 0 10px;
+			text-align: right;
+			a{
+				margin-left: 10px;
+				margin-bottom: 2px;
+			}
+		}
+	}
+
+	.buy{
+		// margin-bottom: 110px;
+	}
 }
 
 .tariffs{
 	@include make-row();
 	margin: 0 -10px;
+	padding-top: 35px;
+	padding-bottom: 25px;
 	.tarif{
-		@include make-col(5);
+		@include media-breakpoint-up(lg) {
+			@include make-col(6);
+		}
+		@include media-breakpoint-up(xl) {
+			@include make-col(5);
+		}
 		padding: 0 10px;
 	}
 }

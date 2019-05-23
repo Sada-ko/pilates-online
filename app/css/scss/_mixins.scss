@@ -27,3 +27,28 @@ h2:first-child, h3:first-child, h4:first-child, h5:first-child,
 h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
 	margin-top: 0;
 }
+
+// Links
+@mixin link-style($link-color, $link-hover-color) {
+	text-decoration: none;
+	color: $link-color;
+	border-bottom: 1px solid transparentize($link-color, .7);
+	transition-duration: .33s;
+	transition-timing-function: ease-out;
+	transition-property: border-bottom,border-color,background,color,fill;
+
+	&.dotted{
+		border-bottom-style: dotted !important;
+	}
+
+	&:hover {
+		color: $link-hover-color;
+		border-bottom-color: transparentize($link-hover-color, .7) !important;
+		text-decoration: none;
+		transition: none;
+	}
+
+	&.btn, &.btn:hover {
+		border: none;
+	}
+}
