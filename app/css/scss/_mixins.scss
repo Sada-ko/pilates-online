@@ -43,7 +43,7 @@ h1 + h2, h2 + h3, h3 + h4, h4 + h5 {
 
 	&:hover {
 		color: $link-hover-color;
-		border-bottom-color: transparentize($link-hover-color, .7) !important;
+		border-bottom-color: transparentize($link-hover-color, 0) !important;
 		text-decoration: none;
 		transition: none;
 	}
