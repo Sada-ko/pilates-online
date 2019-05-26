@@ -221,9 +221,19 @@ img{
 	}
 	.container{
 		@include media-breakpoint-up(lg) {
-		// padding-right: 270px;
-		padding-right: 270px;
+			padding-right: 270px;
+		}
 	}
+
+	button.close{
+		    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    font-size: 40px;
+    font-weight: 500;
+    text-shadow: none;
+    opacity: 1;
 	}
 }
 
@@ -284,12 +294,12 @@ img{
 	@include media-breakpoint-down(md) {
 		border: 50px solid transparent;	
 		border-left: 100px solid white;		
-	bottom: 20px;
-	left: 10px;
+		bottom: 20px;
+		left: 10px;
 		&::after{
 			top: -12px;
-    left: -90px;
-    font-size: 14px;
+			left: -90px;
+			font-size: 14px;
 		}
 	}
 }
