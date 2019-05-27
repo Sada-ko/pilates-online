@@ -124,8 +124,16 @@ a{
 	&.icon{
 		border: none;
 		display: inline-block;
-		width: 34px;
-		height: 34px;
+		width: 50px;
+		height: 50px;
+		@include media-breakpoint-down(md) {
+			width: 40px;
+			height: 40px;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+		}
 	}
 }
 
@@ -390,10 +398,11 @@ button.cta,
 
 	.sum{
 		margin-right: 2px;
+		font-family: 'RFDewiExtended';
 	}
 	.curr{
-		// font-family: 'RFDewi';
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'RFDewiExtended';
+		// font-family: 'Montserrat', sans-serif;
 		font-size: 34px;
 		margin-top: -2px;
 		@include media-breakpoint-down(md) {
@@ -476,7 +485,8 @@ button.cta,
 		transition-duration: .33s;
 		transition-timing-function: ease-out;
 		&:hover{
-			color: $crimson;
+			color: white;
+			background-color: $tertiary-accent;
 			transition: none;
 		}
 
@@ -548,7 +558,7 @@ button.cta,
 				font-size: 16px;
 				font-weight: normal;
 				align-self: flex-end !important;
-				margin-bottom: -4px;
+				margin-bottom: -3px;
 			}
 			.h1{
 				margin-right: 10px;
@@ -659,7 +669,7 @@ footer{
 			padding: 0 10px;
 			text-align: right;
 			a{
-				margin-left: 10px;
+				margin-left: 5px;
 				margin-bottom: 2px;
 			}
 		}
