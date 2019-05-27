@@ -10,7 +10,7 @@
 	font-weight: bold;
 	font-style: normal;
 }
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic');// @font-face {
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic');// @font-face {
 // 	font-family: 'RFDewi';
 // 	src: url('../fonts/RFDewi-Black.WOFF') format('woff');
 // 	font-weight: bold;
@@ -226,14 +226,14 @@ img{
 	}
 
 	button.close{
-		    width: 40px;
-    height: 40px;
-    position: absolute;
-    right: 0;
-    font-size: 40px;
-    font-weight: 500;
-    text-shadow: none;
-    opacity: 1;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		right: 0;
+		font-size: 40px;
+		font-weight: 500;
+		text-shadow: none;
+		opacity: 1;
 	}
 }
 
@@ -362,10 +362,15 @@ button.cta,
 			display: block;
 		}
 		margin-bottom: 20px;
+
+		button{
+			height: 60px;
+			padding-bottom: 5px;
+		}
 	}
 
 	&.side{
-		padding-top: 0;
+		padding-top: 5px;
 		@include media-breakpoint-down(md) {
 			display: none;
 		}
@@ -378,19 +383,19 @@ button.cta,
 			height: 110vh;
 		}
 		.sum{
-			line-height: 100%;
-			margin-bottom: 5px;
+			line-height: 90%;
+			margin-bottom: 0;
 		}
 	}
 
 	.sum{
-		margin-right: 5px;
+		margin-right: 2px;
 	}
 	.curr{
 		// font-family: 'RFDewi';
 		font-family: 'Montserrat', sans-serif;
 		font-size: 34px;
-		margin-top: 2px;
+		margin-top: -2px;
 		@include media-breakpoint-down(md) {
 			font-size: 24px;
 			line-height: 100%;
@@ -419,7 +424,8 @@ button.cta,
 		transition-duration: .33s;
 		transition-timing-function: ease-out;
 		&:hover{
-			color: $crimson;
+			background-color: $crimson;
+			color: white;
 			transition: none;
 		}
 		@include media-breakpoint-down(md) {
@@ -506,6 +512,9 @@ button.cta,
 		// margin-bottom: -4px;
 	}
 	padding-bottom: 10px;
+	@include media-breakpoint-up(lg) {
+		padding-bottom: 20px;
+	}
 }
 
 .week{
@@ -522,6 +531,8 @@ button.cta,
 	.desc{
 		@include make-col(4);
 		position: relative;
+		padding-right: 20px;
+		margin-bottom: -4px;
 		.h1{
 			margin-left: 0;
 			margin-bottom: 20px;
@@ -531,12 +542,13 @@ button.cta,
 			order: 2;
 			display: flex;
 			padding: 10px 0 15px 0;
+			// margin-bottom: 0;
 			.lead{
 				font-family: 'Montserrat', sans-serif;
 				font-size: 16px;
 				font-weight: normal;
 				align-self: flex-end !important;
-				margin-bottom: 0;
+				margin-bottom: -4px;
 			}
 			.h1{
 				margin-right: 10px;
@@ -544,16 +556,11 @@ button.cta,
 			}
 		}
 	}
-	// &.first, &.third{
-	// 	.desc{
-	// 		padding-left: 20px;
-	// 	}
-	// }
-	// &.second, &.fourth{
-		.desc{
-			padding-right: 20px;
-		}
-	// }
+
+	.lead{
+		margin-bottom: 0;
+	}
+
 }
 
 .how-to, .whenever{
@@ -594,7 +601,7 @@ button.cta,
 		@include make-col(8);
 		padding: 0 10px;
 		display: flex;
-		flex-direction: column!important;
+		flex-direction: column !important;
 	}
 	.pic{
 		@include make-col(4);
@@ -617,7 +624,8 @@ button.cta,
 
 		.pic{
 			@include make-col(12);
-			max-height: 90vh;
+			// max-height: 90vh;
+			height: 620px;
 			overflow: hidden;
 		}
 	}
@@ -643,11 +651,11 @@ footer{
 		margin: 0 -10px;
 		margin-top: 110px;
 		.left{
-			@include make-col(8);
+			@include make-col(7);
 			padding: 0 10px;
 		}
 		.right{
-			@include make-col(4);
+			@include make-col(5);
 			padding: 0 10px;
 			text-align: right;
 			a{
@@ -665,8 +673,8 @@ footer{
 .tariffs{
 	@include make-row();
 	margin: 0 -10px;
-	padding-top: 40px;
-	padding-bottom: 35px;
+	padding-top: 45px;
+	padding-bottom: 25px;
 	@include media-breakpoint-down(md) {
 		padding-bottom: 20px;
 	}
@@ -685,7 +693,9 @@ footer{
 		@include media-breakpoint-down(md) {
 			margin-bottom: 20px;
 		}
-
+	}
+	.close-rouble{
+		letter-spacing: -15px;
 	}
 }
 
