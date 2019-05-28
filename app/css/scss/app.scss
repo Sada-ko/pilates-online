@@ -266,13 +266,13 @@ img{
 }
 
 .overlay {
-	background: red;
+	background: white;
 	cursor: pointer;
 	&.is__hidden {
 		display: none;
 	}
 	&:hover .play{
-		border-left-color: $secondary;
+		border-left-color: black;
 		// transition: .3s;
 		transition: none;
 		&::after{
@@ -284,7 +284,7 @@ img{
 
 .play{
 	border: 70px solid transparent;	
-	border-left: 140px solid white;
+	border-left: 140px solid $crimson;
 	position: absolute;
 	bottom: 40px;
 	left: 20px;
@@ -298,11 +298,12 @@ img{
 		top: -15px;
 		left: -125px;
 		font-size: 18px;
+		color: white;
 	}
 
 	@include media-breakpoint-down(md) {
 		border: 50px solid transparent;	
-		border-left: 100px solid white;		
+		border-left: 100px solid $crimson;		
 		bottom: 20px;
 		left: 10px;
 		&::after{
@@ -316,10 +317,10 @@ img{
 .price{
 	display: flex;
 	.sum{
-		// font-family: 'RFDewi';
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'RFDewiExpanded';
+		// font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
-		font-size: 90px;
+		font-size: 62px;
 		letter-spacing: -2px;
 		line-height: 100%;
 		@include media-breakpoint-down(md) {
@@ -405,13 +406,17 @@ button.cta,
 		font-family: 'RFDewiExtended';
 		// font-family: 'Montserrat', sans-serif;
 		font-size: 34px;
-		margin-top: -2px;
+		margin-top: -5px;
 		@include media-breakpoint-down(md) {
-			font-size: 24px;
-			line-height: 100%;
+			font-family: 'RFDewiExpanded';
+			// font-size: 24px;
+			font-size: 68px;
+			line-height: 75%;
+			margin-bottom: 5px;
+			margin-left: 5px;
+			margin-top: 0px;		}
 		}
-	}
-	.head{
+		.head{
 		// font-family: 'RFDewiExtended';
 		// font-weight: bold;
 		// font-size: 30px;
@@ -636,8 +641,8 @@ button.cta,
 		.pic{
 			@include make-col(12);
 			// max-height: 90vh;
-			height: 620px;
-			overflow: hidden;
+			// height: 620px;
+			// overflow: hidden;
 		}
 	}
 }
