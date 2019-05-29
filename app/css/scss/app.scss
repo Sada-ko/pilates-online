@@ -234,15 +234,23 @@ img{
 	}
 
 	button.close{
-		width: 40px;
-		height: 40px;
+		width: 60px;
+		height: 60px;
 		position: absolute;
 		right: 0;
-		font-size: 40px;
+		font-size: 95px;
+		line-height: 60%;
 		font-weight: 500;
 		text-shadow: none;
 		opacity: 1;
 		z-index: 1100;
+		transition-duration: .33s;
+	transition-timing-function: ease-out;
+		&:hover{
+			color: white;
+			opacity: 1;
+			transition: none;
+		}
 	}
 }
 
@@ -517,7 +525,7 @@ button.cta,
 	}
 	.photo{
 		@include media-breakpoint-down(md) {
-			min-height: 400px;
+			min-height: 500px;
 			margin-bottom: 20px;
 		}
 	}
@@ -561,10 +569,10 @@ button.cta,
 			// margin-bottom: 0;
 			.lead{
 				font-family: 'Montserrat', sans-serif;
-				font-size: 16px;
+				// font-size: 16px;
 				font-weight: normal;
 				align-self: flex-end !important;
-				margin-bottom: -3px;
+				margin-bottom: -5px;
 			}
 			.h1{
 				margin-right: 10px;
