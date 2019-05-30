@@ -275,13 +275,12 @@ img{
 
 .overlay {
 	background: white;
-	cursor: pointer;
+	// cursor: pointer;
 	&.is__hidden {
 		display: none;
 	}
 	&:hover .play{
 		border-left-color: black;
-		// transition: .3s;
 		transition: none;
 		&::after{
 			color: white;
@@ -328,7 +327,7 @@ img{
 		font-family: 'RFDewiExpanded';
 		// font-family: 'Montserrat', sans-serif;
 		font-weight: 700;
-		font-size: 62px;
+		font-size: 69px;
 		letter-spacing: -2px;
 		line-height: 100%;
 		@include media-breakpoint-down(md) {
