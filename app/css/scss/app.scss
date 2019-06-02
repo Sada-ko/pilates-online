@@ -277,10 +277,13 @@ img{
 	right: 0;
 	bottom: 0;
 	left: 0;
+	background-image: url('/img/main-4.jpg');
+	background-size: cover;
+	background-position: center center;
 }
 
 .overlay {
-	background: white;
+	background-color: white;
 	// cursor: pointer;
 	&.is__hidden {
 		display: none;
