@@ -1,16 +1,16 @@
-// Типограф
-(function() {
-	var typograf = new Typograf({ locale: ['ru'] })
-	​
-// Выбираем, что будем типографить
-var nodes = document.querySelectorAll('.typographed')
-​
-for (var i = 0; i < nodes.length; i++) {
-	var node = nodes[i]
-// Типографим каждый найденный заголовок
-node.innerHTML = typograf.execute(node.innerHTML)
-}
-})()
+// // Типограф
+// (function() {
+// 	var typograf = new Typograf({ locale: ['ru'] })
+// 	​
+// // Выбираем, что будем типографить
+// var nodes = document.querySelectorAll('.typographed')
+// ​
+// for (var i = 0; i < nodes.length; i++) {
+// 	var node = nodes[i]
+// // Типографим каждый найденный заголовок
+// node.innerHTML = typograf.execute(node.innerHTML)
+// }
+// })()
 
 
 // Fill-Box
