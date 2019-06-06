@@ -1,17 +1,9 @@
-// @font-face {
-// 	font-family: 'RFDewiExpanded';
-// 	src: url('../fonts/RFDewiExpanded-Semibold.WOFF') format('woff');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
 @font-face {
 	font-family: 'RFDewiExpanded';
 	src: url('../fonts/RFDewiExpanded-Black.WOFF') format('woff');
 	font-weight: bold;
 	font-style: normal;
 }
-
-// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic');
 
 @font-face {
 	font-family: 'Montserrat';
@@ -27,18 +19,6 @@
 	font-style: normal;
 }
 
-// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic');// @font-face {
-// 	font-family: 'RFDewi';
-// 	src: url('../fonts/RFDewi-Black.WOFF') format('woff');
-// 	font-weight: bold;
-// 	font-style: normal;
-// }
-// @font-face {
-// 	font-family: 'RFDewi';
-// 	src: url('../fonts/RFDewi-Semibold.WOFF') format('woff');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
 @font-face {
 	font-family: 'RFDewiExtended';
 	src: url('../fonts/RFDewiExtended-Semibold.WOFF') format('woff');
@@ -51,12 +31,15 @@ body{
 	// font-family: 'RFDewi';
 	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
-	background-color: $light-pink;
 	color: black;
 
 	@include media-breakpoint-down(md) {
 		font-size: 16px;
 		background-color: white;
+	}
+
+	&.brand-color{
+		background-color: $light-pink;
 	}
 }
 
@@ -195,9 +178,6 @@ a{
 	}
 }
 
-main{
-	// background-color: $light-pink;
-}
 
 .container{
 	margin: 0;
@@ -214,8 +194,27 @@ main{
 	}
 }
 
-main{
 
+.center{
+	margin-left: auto!important;
+	margin-right: auto!important;
+	padding-top: 20vh;
+	width: 100%;
+	max-width: 42em;
+	height: 100%;
+	.container{
+		background-color: $light-pink;
+		max-width: 800px;
+		padding: 10px;
+		.lead{
+			margin-bottom: 50px;
+		}
+	}
+	h2{
+		@include media-breakpoint-down(md) {
+			margin-left: 10px;
+		}
+	}
 }
 
 .innertube{
@@ -226,9 +225,7 @@ main{
 }
 
 section{
-	// .container{
-		background-color: white;
-	// }
+	background-color: white;
 }
 
 img{
