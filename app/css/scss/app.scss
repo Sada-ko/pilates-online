@@ -197,25 +197,19 @@ a{
 
 
 .service{
-	// margin-left: auto!important;
-	// margin-right: auto!important;
-	// padding-top: 20vh;
 	width: 100%;
-	// height: 100%;
-		// background-color: $light-pink;
 	.container{
 		max-width: 1280px;
-    padding: 0;
-    // padding-right: 270px;
-    @include media-breakpoint-down(md) {
-padding-right: 0;
+		padding: 0;
+		@include media-breakpoint-down(md) {
+			padding-right: 0;
 		}
 		.lead{
 			// margin-bottom: 50px;
 		}
 	}
 	.innertube{
-		    min-height: 100vh;
+		min-height: 100vh;
 		background-color: white;
 	}
 	h1{
@@ -227,18 +221,21 @@ padding-right: 0;
 	&.thanks{
 		.row{
 			margin: 0 -10px;
-			& > div{
-				padding: 0 10px;
-			}
 		}
 		.photo{
+			padding: 0 10px;
 			@include make-col(4);
-			padding-right: 0 !important;
+			@include media-breakpoint-down(md) {
+				@include make-col(12);
+				margin-bottom: 10px;
+				padding-right: 10px;
+			}
+			padding-right: 0;
 		}
 		.pic{
 			min-height: 500px;
-			// max-width: 500px;
 			@include media-breakpoint-down(md) {
+			min-height: 550px;
 				min-width: 100%;
 			}
 			margin-bottom: 15px;
@@ -248,8 +245,13 @@ padding-right: 0;
 			background-position: center center;
 		}
 		.text{
+			padding: 0 10px;
 			@include make-col(8);
+			@include media-breakpoint-down(md) {
+				@include make-col(12);
+			}
 			margin-bottom: -5px;
+			padding-right: 0;
 		}
 	}
 }
