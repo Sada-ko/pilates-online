@@ -203,13 +203,15 @@ a{
 	height: 100%;
 	.container{
 		max-width: 1280px;
-		padding-right: 270px;
 		padding: 0;
 		// background-color: $light-pink;
 		// max-width: 800px;
 		.lead{
 			// margin-bottom: 50px;
 		}
+	}
+	.innertube{
+		padding-right: 270px;
 	}
 	h2{
 		@include media-breakpoint-down(md) {
@@ -219,19 +221,19 @@ a{
 	&.thanks{
 		.row{
 			margin: 0 -10px;
-			& >div{
+			& > div{
 				padding: 0 10px;
 			}
 		}
 		.photo{
-			@include make-col(5);
+			// @include make-col(5);
 		}
 		.pic{
 			min-height: 500px;
 			max-width: 500px;
 			@include media-breakpoint-down(md) {
-min-width: 100%;
-	}
+				min-width: 100%;
+			}
 			margin-bottom: 15px;
 			// height: 100%;
 			background-image: url('../img/author-2.jpg');
@@ -239,7 +241,7 @@ min-width: 100%;
 			background-position: center center;
 		}
 		.text{
-			@include make-col(7);
+			// @include make-col(7);
 		}
 	}
 }
