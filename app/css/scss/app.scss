@@ -34,6 +34,10 @@ body{
 	color: black;
 	min-height: 100vh;
 
+	// @include media-breakpoint-up(xxl) {
+	// 	font-size: 20px;
+	// }
+
 	@include media-breakpoint-down(md) {
 		font-size: 16px;
 		background-color: white;
@@ -78,6 +82,9 @@ h2, .h2{
 	margin-left: -.2rem;
 	margin-bottom: 10px;
 	transform: translateY(-5px);
+	// @include media-breakpoint-up(xxl) {
+	// 	font-size: 52px;
+	// }
 	&.light{
 		font-weight: normal;
 	}
@@ -151,6 +158,10 @@ a{
 	font-weight: bold;
 	margin-bottom: 20px;
 
+	// @include media-breakpoint-up(xxl) {
+	// 	font-size: 32px;
+	// }
+
 	@include media-breakpoint-down(md) {
 		font-size: 20px;
 		line-height: 1.05;
@@ -190,9 +201,11 @@ a{
 	body > &{
 		display: flex;
 	}
-	@include media-breakpoint-up(lg) {
-		// padding-right: 270px;
-	}
+
+	// @include media-breakpoint-up(xxl) {
+	// 	max-width: 1420px;
+	// }
+
 }
 
 
@@ -215,6 +228,9 @@ a{
 			padding-right: 270px;
 			padding-right: 480px;
 		}
+		// @include media-breakpoint-up(xxl) {
+		// 	padding-right: 350px;
+		// }
 	}
 	h1{
 		margin-left: -6px;
@@ -300,6 +316,9 @@ img{
 		@include media-breakpoint-up(lg) {
 			padding-right: 270px;
 		}
+		// @include media-breakpoint-up(xxl) {
+		// 	padding-right: 350px;
+		// }
 	}
 
 	button.close{
@@ -466,11 +485,18 @@ button.cta,
 		@include media-breakpoint-up(lg) {
 			position: absolute;
 			width: 270px;
-			max-width: 270px !important;
+			// max-width: 270px !important;
 			position: -webkit-sticky;
 			position: sticky;
 			height: 110vh;
 		}
+		// @include media-breakpoint-up(xxl) {
+		// 	width: 350px;
+		// 	position: absolute;
+		// 	position: -webkit-sticky;
+		// 	position: sticky;
+		// 	height: 110vh;
+		// }
 		.sum{
 			line-height: 90%;
 			margin-bottom: 0;
@@ -742,6 +768,9 @@ footer{
 		@include media-breakpoint-up(lg) {
 			padding-right: 270px;
 		}
+		// @include media-breakpoint-up(xxl) {
+		// 	padding-right: 350px;
+		// }
 	}
 	h3{
 		margin-top: 0;
