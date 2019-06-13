@@ -205,12 +205,16 @@ a{
 			padding-right: 0;
 		}
 		.lead{
-			// margin-bottom: 50px;
+			margin-bottom: 50px;
 		}
 	}
 	.innertube{
 		min-height: 100vh;
 		background-color: white;
+		@include media-breakpoint-up(lg) {
+			padding-right: 270px;
+			padding-right: 480px;
+		}
 	}
 	h1{
 		margin-left: -6px;
@@ -221,8 +225,8 @@ a{
 	&.thanks{
 		h1{
 			@include media-breakpoint-up(lg) {
-				font-size: 110px;
-				margin-bottom: 10px;
+				// font-size: 110px;
+				// margin-bottom: 10px;
 			}
 		}
 		.row{
@@ -252,9 +256,9 @@ a{
 		}
 		.text{
 			padding: 0 10px;
-			@include make-col(8);
+			// @include make-col(8);
 			@include media-breakpoint-down(md) {
-				@include make-col(12);
+				// @include make-col(12);
 			}
 			margin-bottom: -5px;
 			// padding-right: 0;
