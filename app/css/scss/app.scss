@@ -315,11 +315,11 @@ img{
 	}
 	.container{
 		@include media-breakpoint-up(lg) {
-			// padding-right: 270px;
+			padding-right: 270px;
 		}
-		// @include media-breakpoint-up(xxl) {
-		// 	padding-right: 350px;
-		// }
+		@include media-breakpoint-up(xxl) {
+		 	padding-right: 350px;
+		}
 	}
 
 	button.close{
@@ -436,7 +436,7 @@ img{
 button.cta,
 .signup-form .button,
 a.cta{
-	@include btn-colors(black, $tertiary-accent);
+	@include btn-colors(black, $tertiary-accent, white);
 	margin: 0;
 	padding: 0;
 	border-radius: 0;
@@ -447,7 +447,6 @@ a.cta{
 	border: none;
 	height: 50px;
 	padding: 0 20px;
-
 	display: block;
 
 	&.final{	
@@ -591,8 +590,15 @@ a.cta{
 		display: none;
 	}
 	input{
-		border: none;
+		border: 4px solid black;
 		padding-bottom: 5px;
+		background-color: $crimson;
+		&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: rgba(0, 0, 0, .3);
+		}
+		&:focus{
+			background-color: white;
+		}
 	}
 	.email{
 		width: 100%;
@@ -606,10 +612,14 @@ a.cta{
 		}
 	}
 	.button{
-		color: white;
+		color: $crimson;
 		background-color: $secondary-accent;
 		transition-duration: .33s;
 		transition-timing-function: ease-out;
+		width: 100px;
+		font-size: 1.75em;
+		line-height: 1em;
+		margin-left: -4px;
 		&:hover{
 			color: white;
 			background-color: $tertiary-accent;
@@ -779,13 +789,13 @@ footer{
 	z-index: 2;
 
 	.container{
-		// max-width: 1280px;
+		max-width: 1280px;
 		@include media-breakpoint-up(lg) {
-			// padding-right: 270px;
+			padding-right: 270px;
 		}
-		// @include media-breakpoint-up(xxl) {
-		// 	padding-right: 350px;
-		// }
+		@include media-breakpoint-up(xxl) {
+			padding-right: 350px;
+		}
 	}
 	h3{
 		margin-top: 0;
@@ -819,7 +829,7 @@ footer{
 	@include make-row();
 	margin: 0 -10px;
 	padding-top: 45px;
-	padding-bottom: 25px;
+	padding-bottom: 35px;
 	@include media-breakpoint-down(md) {
 		padding-bottom: 0;
 	}
@@ -828,32 +838,33 @@ footer{
 		padding: 0 10px;
 
 		@include media-breakpoint-up(lg) {
-			@include make-col(4);
+			@include make-col(5);
 		}
 
 		@include media-breakpoint-up(xl) {
-			@include make-col(4);
+			// @include make-col(6);
 		}
 
 		@include media-breakpoint-down(md) {
 			margin-bottom: 20px;
 		}
 
-	}
-	.buy{
-		@include make-col(12);
-		padding: 0 10px;
-
-		@include media-breakpoint-up(lg) {
-			@include make-col(2);
+		button.cta{
+			@include btn-colors($light-pink, $light-pink, $crimson);
+			background-color: $light-pink;
+			color: black;
+			width: 330px;
+			height: 74px;
+			margin-bottom: 10px;
 		}
 
-		@include media-breakpoint-up(xl) {
-			@include make-col(4);
-		}
-
-		@include media-breakpoint-down(md) {
-			padding-top: 10px;
+		.sum{
+			font-size: 48px;
+			line-height: 72px;
+			padding-left: 5px;
+			.short{
+				font-size: 34px;
+			}
 		}
 	}
 	.close-rouble{
@@ -861,11 +872,21 @@ footer{
 	}
 }
 
+.buy{
+	@include make-col(12);
+	// padding: 0 10px;
 
+	@include media-breakpoint-up(lg) {
+			// @include make-col(2);
+			max-width: 1024px;
+		}
 
+		@include media-breakpoint-up(xl) {
+			// @include make-col(4);
+		}
 
-
-
-
-
+		@include media-breakpoint-down(md) {
+			padding-top: 10px;
+		}
+	}
 
