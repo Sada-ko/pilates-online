@@ -851,7 +851,7 @@ footer{
 		}
 
 		button.cta{
-			@include btn-colors($light-pink, $light-pink, $crimson);
+			@include btn-colors($secondary-accent, $secondary-accent, white);
 			background-color: white;
 			color: black;
 			width: 300px;
