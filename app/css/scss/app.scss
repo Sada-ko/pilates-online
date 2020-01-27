@@ -577,6 +577,7 @@ a.cta{
 	font-size: 26px;
 	padding-top: 5px;
 	margin-bottom: 10px;
+	// box-shadow:inset 0 0 10px #000000;
 
 	@include media-breakpoint-down(md) {
 		font-size: 16px;
@@ -851,9 +852,9 @@ footer{
 
 		button.cta{
 			@include btn-colors($light-pink, $light-pink, $crimson);
-			background-color: $light-pink;
+			background-color: white;
 			color: black;
-			width: 330px;
+			width: 300px;
 			height: 74px;
 			margin-bottom: 10px;
 			@include media-breakpoint-down(md) {
@@ -864,7 +865,7 @@ footer{
 		.sum{
 			font-size: 48px;
 			line-height: 72px;
-			padding-left: 5px;
+			// padding-left: 5px;
 			.short{
 				font-size: 34px;
 				@include media-breakpoint-down(md) {
