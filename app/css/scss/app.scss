@@ -343,6 +343,7 @@ img{
 	}
 }
 
+
 // Video hidden
 .wrapper {
 	width: 100%;
@@ -595,7 +596,7 @@ a.cta{
 		padding-bottom: 5px;
 		background-color: $crimson;
 		&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-			color: rgba(0, 0, 0, .3);
+			color: rgba(255, 255, 255, .3);
 		}
 		&:focus{
 			background-color: white;
@@ -614,7 +615,7 @@ a.cta{
 	}
 	.button{
 		color: $crimson;
-		background-color: $secondary-accent;
+		background-color: white;
 		transition-duration: .33s;
 		transition-timing-function: ease-out;
 		width: 100px;
@@ -623,7 +624,7 @@ a.cta{
 		// margin-left: -4px;
 		&:hover{
 			color: white;
-			background-color: $tertiary-accent;
+			background-color: $secondary-accent;
 			transition: none;
 		}
 
