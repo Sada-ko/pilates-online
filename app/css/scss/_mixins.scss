@@ -1,9 +1,14 @@
 
 // Buttons hovering etc
 @mixin btn-colors($base-button, $button-hover, $label-color) {
+	transition-duration: .33s;
+	transition-timing-function: ease-out;
+	transition-property: border-bottom,border-color,background,color,fill;
+
 	&:hover {
 		background-color: $button-hover;
 		color: $label-color;
+		transition: none;
 	}
 	&:not(:disabled):not(.disabled).active,
 	&:not(:disabled):not(.disabled):active,
