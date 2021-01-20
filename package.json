@@ -31,6 +31,6 @@
     "gulp-postcss": "^8.0.0",
     "animate.css": "^3.7.0",
     "scrollmagic": "^2.0.5",
-    "gsap": "^2.0.1"
+    "gsap": "^3.6.0"
   }
 }
